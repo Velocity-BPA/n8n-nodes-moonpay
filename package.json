@@ -1,0 +1,86 @@
+{
+  "name": "n8n-nodes-moonpay",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for MoonPay crypto payment infrastructure providing 8 resources and 20+ operations for fiat-to-crypto on-ramps, crypto-to-fiat off-ramps, quotes, transactions, and customer management.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-moonpay.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-moonpay",
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-moonpay/issues"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "moonpay",
+    "crypto",
+    "cryptocurrency",
+    "payment",
+    "on-ramp",
+    "off-ramp",
+    "fiat",
+    "web3",
+    "blockchain"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "COMMERCIAL_LICENSE.md",
+    "LICENSING_FAQ.md",
+    "README.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/MoonPayApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/MoonPay/MoonPay.node.js",
+      "dist/nodes/MoonPay/MoonPayTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

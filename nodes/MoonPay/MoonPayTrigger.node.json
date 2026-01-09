@@ -1,0 +1,23 @@
+{
+	"node": "n8n-nodes-base.moonPayTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Finance & Accounting", "Data & Storage"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://dev.moonpay.com/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://dev.moonpay.com/"
+			}
+		]
+	},
+	"alias": ["crypto", "payment", "webhook", "on-ramp", "off-ramp"],
+	"subcategories": {
+		"Finance & Accounting": ["Cryptocurrency"],
+		"Data & Storage": ["Financial Data"]
+	}
+}
